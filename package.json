@@ -1,0 +1,24 @@
+{
+  "name": "icecream-engine",
+  "version": "1.0.0",
+  "description": "Generate recommendations and such",
+  "author": "Steve Kinney",
+  "license": "MIT",
+  "main": "server/index.js",
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  },
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "leveldown": "^1.4.3",
+    "levelup": "^1.3.1",
+    "lodash": "^3.10.1",
+    "pouchdb": "^5.1.0"
+  }
+}

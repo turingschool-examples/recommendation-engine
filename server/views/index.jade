@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+  head
+    title= title
+    link(href="main.css", rel="stylesheet")
+  body
+    .container
+      h1= title
+      form(method="POST", action="/ratings")
+        .username
+          label Twitter Username
+          input(type="text", name="username", placeholder="Username")
+        table
+          thead
+            tr
+              th Flavor
+              th Rating
+          tbody
+            each flavor in flavors
+              tr.flavor
+                td= flavor
+                td
+                  label.choice
+                    input(type="radio" name="flavorRatings[#{flavor}]", value="-2")
+                    | Effin' Gross
+                  label.choice
+                    input(type="radio" name="flavorRatings[#{flavor}]", value="-1")
+                    | I'd Prefer Not To
+                  label.choice
+                    input(type="radio" name="flavorRatings[#{flavor}]", value="0" checked="true")
+                    | Utterly Indifferent
+                  label.choice
+                    input(type="radio" name="flavorRatings[#{flavor}]", value="1")
+                    | Yea, I Like It
+                  label.choice
+                    input(type="radio" name="flavorRatings[#{flavor}]", value="2")
+                    | Friggin' Love it
+        input(type="submit").submit
